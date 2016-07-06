@@ -9,8 +9,7 @@ public class Booter {
 
   public static void main(String[] args) {
     EmbbedTomcat.main(args);
-    logger.info("joy ads cmp server started... ");
-
+    logger.info("http web server started... ");
   }
   
 } 

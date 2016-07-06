@@ -2,7 +2,7 @@ package net.flyingfat.web.model;
 
 import java.io.Serializable;
 
-public class EmployeeVO implements Serializable {
+public class UserVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
@@ -37,7 +37,7 @@ public class EmployeeVO implements Serializable {
 
 	@Override
     public String toString() {
-        return "EmployeeVO [id=" + id + ", firstName=" + firstName
+        return "UserVO [id=" + id + ", firstName=" + firstName
                 + ", lastName=" + lastName + "]";
     }
 	

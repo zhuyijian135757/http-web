@@ -9,9 +9,17 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
     
     <!-- 基于Url映射方式,这个配置，就是把userService接口，提供给远程调用 -->
     <!-- <bean id="httpService"  class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
-        <property name="service" ref="employeeService"/>
-        <property name="serviceInterface" value="net.flyingfat.spring.service.EmployeeService"/>
+        <property name="service" ref="userService"/>
+        <property name="serviceInterface" value="net.flyingfat.web.service.UserService"/>
     </bean> -->
-    
+    <bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:config.properties</value>
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
     
 </beans>
