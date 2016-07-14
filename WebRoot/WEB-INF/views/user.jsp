@@ -1,20 +1,31 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<script type="text/javascript" src="/plugins/jquery/jquery.js"></script> 
-
 <html>
 <head>
     <title>Spring MVC Hello World</title>
 </head>
- 
+ <script type="text/javascript" src="/plugins/jquery/jquery.js"></script> 
 <script type="text/javascript">
-	$.ajax({
+	/* $.ajax({
 		type:'get',
 		url:'/user/getUser',
 		success:function(data){
 			//alert(JSON.stringify(data));
 		}
-	})
+	})  */
+	
+    $(document).ready(function(){  
+        var data1={"userName":"test","address":"gz"};  
+        $.ajax({ 
+            type:"POST", 
+            url:"/user/getLogInfo", 
+            dataType:"json",      
+            contentType:"application/json",               
+            data:data1, 
+            success:function(data){ 
+                                       
+            } 
+         }); 
+    });
+	
 </script> 
  
 <body>

@@ -13,7 +13,7 @@ public class EmbbedTomcat
 {
   private static final Logger logger = LoggerFactory.getLogger(EmbbedTomcat.class);
   private String hostname = "localhost";
-  private int port = 8089;
+  private int port = 80;
   private String webAppDir = "WebRoot";
   private String contextPath = "/";
   private String URIEncoding = "UTF-8";
